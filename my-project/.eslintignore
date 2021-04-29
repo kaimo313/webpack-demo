@@ -1,5 +1,7 @@
 node_modules/
 dist/
+
+common/
 README.md
 package.json
 package-lock.json

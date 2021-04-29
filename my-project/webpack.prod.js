@@ -6,6 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 const setMPA = () => {
   const entry = {};
@@ -60,7 +61,7 @@ module.exports = {
         test: /.js$/,
         use: [
           'babel-loader',
-          'eslint-loader'
+          // 'eslint-loader'
         ]
       },
       {
@@ -128,18 +129,44 @@ module.exports = {
       cssProcessor: require('cssnano')
     }),
     new CleanWebpackPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin()
-  ].concat(htmlWebpackPlugins),
-  optimization: {
-    splitChunks: {
-      minSize: 0,
-      cacheGroups: {
-        commons: {
-          name: 'commons',
-          chunks: 'all',
-          minChunks: 2
-        }
-      }
+    new HtmlWebpackExternalsPlugin({
+      externals: [
+        {
+          module: 'react',
+          entry: 'https://11.url.cn/now/lib/16.2.0/react.min.js',
+          global: 'React',
+        },
+        {
+          module: 'react-dom',
+          entry: 'https://11.url.cn/now/lib/16.2.0/react-dom.min.js',
+          global: 'ReactDOM',
+        },
+      ]
+    }),
+    new FriendlyErrorsWebpackPlugin(),
+    function() {
+      this.hooks.done.tap('done', (stats) => {
+          if (stats.compilation.errors &&
+              stats.compilation.errors.length && 
+              process.argv.indexOf('--watch') == -1)
+          {
+              console.log('凯小默测试一下：build error');
+              process.exit(1);
+          }
+      })
     }
-  }
+  ].concat(htmlWebpackPlugins),
+  // optimization: {
+  //   splitChunks: {
+  //     minSize: 0,
+  //     cacheGroups: {
+  //       commons: {
+  //         name: 'commons',
+  //         chunks: 'all',
+  //         minChunks: 2
+  //       }
+  //     }
+  //   }
+  // },
+  stats: 'errors-only'
 };

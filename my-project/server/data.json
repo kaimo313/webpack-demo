@@ -1,0 +1,49 @@
+{
+	"error": [],
+	"extra": [],
+	"data": {
+		"list": [
+			[{
+				"sub_count": 5556,
+				"column_type": 1,
+				"id": 192,
+				"column_price_market": 9900,
+				"column_bgcolor": "#F6F7FB",
+				"column_title": "SQL必知必会",
+				"column_cover_small": "https:\/\/static001.geekbang.org\/resource\/image\/1c\/38\/1c5a5b154b543af952312eef33217438.jpg",
+				"column_cover": "https:\/\/static001.geekbang.org\/resource\/image\/c7\/0d\/c7ee0aabbcb6d2da09a1b4a56c1a730d.jpg",
+				"had_sub": false,
+				"price_type": 2,
+				"column_unit": "45讲",
+				"is_experience": false,
+				"column_ctime": 1559640855,
+				"update_frequency": "每周一 \/ 三 \/ 五更新",
+				"is_onboard": true,
+				"author_intro": "清华大学计算机博士",
+				"column_sku": 100029501,
+				"column_cover_wxlite": "https:\/\/static001.geekbang.org\/resource\/image\/cd\/f0\/cd26b744d388dbd4387dcfaa66dd8bf0.jpg",
+				"column_price": 6800,
+				"column_price_sale": 6800,
+				"author_name": "陈旸",
+				"column_subtitle": "从入门到数据实战"
+			}]
+		],
+		"nav": [{
+			"id": 1,
+			"name": "专栏",
+			"color": "#5ba6ff",
+			"icon": "https:\/\/static001.geekbang.org\/resource\/image\/dd\/9e\/dd8cbc79f017d1b01f643c7ea929d79e.png"
+		}, {
+			"id": 3,
+			"name": "视频课程",
+			"color": "#79c109",
+			"icon": "https:\/\/static001.geekbang.org\/resource\/image\/4a\/c3\/4aebe8fb752fa21a0fd989a45d9847c3.png"
+		}, {
+			"id": 2,
+			"name": "微课",
+			"color": "#5ba6ff",
+			"icon": "https:\/\/static001.geekbang.org\/resource\/image\/9c\/f1\/9c223ccae33c5245a3009857582f1df1.png"
+		}]
+	},
+	"code": 0
+}

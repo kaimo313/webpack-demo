@@ -6,6 +6,6 @@ module.exports = {
     "node": true
   },
   "rules": {
-    "indent": ["error", 4]
+    "indent": ["warn", 4]
   }
 }

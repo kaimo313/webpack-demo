@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server --config webpack.dev.js --open"
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build:ssr": "webpack --config webpack.ssr.js"
   },
   "keywords": [],
   "author": "",
@@ -31,7 +32,9 @@
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
+    "express": "^4.17.1",
     "file-loader": "^6.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-externals-plugin": "^3.8.0",
     "html-webpack-plugin": "^4.3.0",
     "less": "^3.11.3",
@@ -48,6 +51,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "kaimo-large-number": "^1.0.1",
     "lib-flexible": "^0.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
