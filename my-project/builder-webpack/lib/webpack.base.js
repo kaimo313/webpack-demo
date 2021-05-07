@@ -38,7 +38,7 @@ const setMPA = () => {
             minifyJS: true,
             removeComments: false,
           },
-        })
+        }),
       );
     });
 
@@ -51,10 +51,10 @@ const setMPA = () => {
 const { entry, htmlWebpackPlugins } = setMPA();
 
 module.exports = {
-  entry: entry,
+  entry,
   output: {
     path: path.join(projectRoot, 'dist'),
-    filename: '[name]_[chunkhash:8].js'
+    filename: '[name]_[chunkhash:8].js',
   },
   module: {
     rules: [
@@ -62,8 +62,8 @@ module.exports = {
         test: /.js$/,
         use: [
           {
-            loader: 'babel-loader'
-          }
+            loader: 'babel-loader',
+          },
         ],
       },
       {
