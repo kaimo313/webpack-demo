@@ -1,0 +1,344 @@
+ DONE  Compiled successfully in 1755ms12:29:29 ├F10: AM┤
+
+{
+  "errors": [],
+  "warnings": [],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\index\\index.js",
+      "name": "./src/index/index.js",
+      "index": 0,
+      "index2": 2,
+      "size": 150,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 1,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\index\\helloWebpack.js",
+      "name": "./src/index/helloWebpack.js",
+      "index": 1,
+      "index2": 0,
+      "size": 60,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\index\\index.js",
+      "issuerId": 0,
+      "issuerName": "./src/index/index.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\index\\index.js",
+          "name": "./src/index/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 2,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\common\\index.js",
+      "name": "./common/index.js",
+      "index": 2,
+      "index2": 1,
+      "size": 54,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0,
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\index\\index.js",
+      "issuerId": 0,
+      "issuerName": "./src/index/index.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\index\\index.js",
+          "name": "./src/index/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 3,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "name": "./src/search/index.js",
+      "index": 3,
+      "index2": 11,
+      "size": 4592,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 4,
+      "identifier": "external \"React\"",
+      "name": "external \"React\"",
+      "index": 4,
+      "index2": 3,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 5,
+      "identifier": "external \"ReactDOM\"",
+      "name": "external \"ReactDOM\"",
+      "index": 5,
+      "index2": 4,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 6,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\css-loader\\dist\\cjs.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\less-loader\\dist\\cjs.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\postcss-loader\\src\\index.js??ref--6-3!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\px2rem-loader\\index.js??ref--6-4!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\search.less",
+      "name": "./src/search/search.less",
+      "index": 6,
+      "index2": 6,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 7,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\file-loader\\dist\\cjs.js??ref--7-0!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\images\\logo.png",
+      "name": "./src/search/images/logo.png",
+      "index": 8,
+      "index2": 7,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 8,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\tree-shaking.js",
+      "name": "./src/search/tree-shaking.js",
+      "index": 9,
+      "index2": 8,
+      "size": 113,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 9,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\kaimo-large-number\\index.js",
+      "name": "./node_modules/kaimo-large-number/index.js",
+      "index": 10,
+      "index2": 10,
+      "size": 167,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 10,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\kaimo-large-number\\dist\\large-number.js",
+      "name": "./node_modules/kaimo-large-number/dist/large-number.js",
+      "index": 11,
+      "index2": 9,
+      "size": 6550,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\kaimo-large-number\\index.js",
+      "issuerId": 9,
+      "issuerName": "./node_modules/kaimo-large-number/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        },
+        {
+          "id": 9,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\kaimo-large-number\\index.js",
+          "name": "./node_modules/kaimo-large-number/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 11,
+      "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\text.js",
+      "name": "./src/search/text.js",
+      "index": 12,
+      "index2": 12,
+      "size": 139,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "S:\\KaimoCode\\webpack-demo\\my-project\\node_modules\\babel-loader\\lib\\index.js!S:\\KaimoCode\\webpack-demo\\my-project\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "filteredModules": 1,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  }
+}
