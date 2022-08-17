@@ -10,6 +10,8 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const HappyPack = require('happypack');
+const TerserPlugin = require("terser-webpack-plugin");
 
 const setMPA = () => {
     const entry = {};
@@ -63,7 +65,14 @@ module.exports = smp.wrap({
             {
                 test: /.js$/,
                 use: [
+                    // {
+                    //     loader: 'thread-loader',
+                    //     options: {
+                    //         workers: 3
+                    //     }
+                    // },
                     'babel-loader',
+                    // 'happypack/loader',
                     // 'eslint-loader'
                 ]
             },
@@ -157,7 +166,11 @@ module.exports = smp.wrap({
                 }
             })
         },
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin(),
+        // new HappyPack({
+        //     // 3) re-add the loaders you replaced above in #1:
+        //     loaders: ['babel-loader']
+        // })
     ].concat(htmlWebpackPlugins),
     // optimization: {
     //   splitChunks: {
@@ -171,5 +184,12 @@ module.exports = smp.wrap({
     //     }
     //   }
     // },
+    optimization: {
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,
+            }),
+        ],
+    },
     // stats: 'errors-only'
 });
