@@ -166,11 +166,14 @@ module.exports = smp.wrap({
                 }
             })
         },
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
         // new HappyPack({
         //     // 3) re-add the loaders you replaced above in #1:
         //     loaders: ['babel-loader']
         // })
+        new webpack.DllReferencePlugin({
+            manifest: require("./build/library/library.json")
+        })
     ].concat(htmlWebpackPlugins),
     // optimization: {
     //   splitChunks: {
