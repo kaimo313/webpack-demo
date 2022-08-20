@@ -10,8 +10,9 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const HappyPack = require('happypack');
+const HappyPack = require('happypack');
 const TerserPlugin = require("terser-webpack-plugin");
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 const setMPA = () => {
     const entry = {};
@@ -71,8 +72,8 @@ module.exports = smp.wrap({
                     //         workers: 3
                     //     }
                     // },
-                    'babel-loader',
-                    // 'happypack/loader',
+                    // 'babel-loader',
+                    'happypack/loader',
                     // 'eslint-loader'
                 ]
             },
@@ -167,13 +168,14 @@ module.exports = smp.wrap({
             })
         },
         // new BundleAnalyzerPlugin(),
-        // new HappyPack({
-        //     // 3) re-add the loaders you replaced above in #1:
-        //     loaders: ['babel-loader']
+        new HappyPack({
+            // 3) re-add the loaders you replaced above in #1:
+            loaders: ['babel-loader?cacheDirectory=true']
+        }),
+        // new webpack.DllReferencePlugin({
+        //     manifest: require("./build/library/library.json")
         // })
-        new webpack.DllReferencePlugin({
-            manifest: require("./build/library/library.json")
-        })
+        new HardSourceWebpackPlugin()
     ].concat(htmlWebpackPlugins),
     // optimization: {
     //   splitChunks: {
@@ -191,6 +193,7 @@ module.exports = smp.wrap({
         minimizer: [
             new TerserPlugin({
                 parallel: true,
+                cache: true
             }),
         ],
     },
