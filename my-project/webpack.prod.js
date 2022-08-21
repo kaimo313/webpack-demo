@@ -9,10 +9,14 @@ const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 const smp = new SpeedMeasurePlugin();
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HappyPack = require('happypack');
-const TerserPlugin = require("terser-webpack-plugin");
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+// const TerserPlugin = require("terser-webpack-plugin");
+// const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const PATHS = {
+    src: path.join(__dirname, 'src')
+}
 
 const setMPA = () => {
     const entry = {};
@@ -65,6 +69,7 @@ module.exports = smp.wrap({
         rules: [
             {
                 test: /.js$/,
+                include: path.resolve("src"),
                 use: [
                     // {
                     //     loader: 'thread-loader',
@@ -170,12 +175,17 @@ module.exports = smp.wrap({
         // new BundleAnalyzerPlugin(),
         new HappyPack({
             // 3) re-add the loaders you replaced above in #1:
-            loaders: ['babel-loader?cacheDirectory=true']
+            // loaders: ['babel-loader?cacheDirectory=true']
+            loaders: ['babel-loader']
         }),
         // new webpack.DllReferencePlugin({
         //     manifest: require("./build/library/library.json")
         // })
-        new HardSourceWebpackPlugin()
+        // new HardSourceWebpackPlugin()
+        // 路径需要的是绝对路径，多页面需要传递数组，通过 glob 找到符合路径下面的所有的都匹配出来
+        new PurgecssPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+        }),
     ].concat(htmlWebpackPlugins),
     // optimization: {
     //   splitChunks: {
@@ -189,13 +199,21 @@ module.exports = smp.wrap({
     //     }
     //   }
     // },
-    optimization: {
-        minimizer: [
-            new TerserPlugin({
-                parallel: true,
-                cache: true
-            }),
-        ],
-    },
+    // optimization: {
+    //     minimizer: [
+    //         new TerserPlugin({
+    //             parallel: true,
+    //             cache: true
+    //         }),
+    //     ],
+    // },
+    resolve: {
+        alias: {
+            'react': path.resolve(__dirname, './node_modules/react/umd/react.production.min.js'),
+            'react-dom': path.resolve(__dirname, './node_modules/react-dom/umd/react-dom.production.min.js'),
+        },
+        extensions: ['.js'], // 表示在 import 文件时文件后缀名可以不写
+        mainFields: ['main'], // 当从 npm 包中导入模块时，此选项将决定在 package.json 中使用哪个字段导入模块。
+    }
     // stats: 'errors-only'
 });
