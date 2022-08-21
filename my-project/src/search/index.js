@@ -9,7 +9,7 @@ import '../../common/index.js';
 import { kaimo666 } from './tree-shaking.js';
 // 引入大加法
 import kaimoLargeNumber from 'kaimo-large-number';
-
+import girl from './images/girl.jpg';
 
 class Search extends React.Component {
 
@@ -36,6 +36,7 @@ class Search extends React.Component {
     const { Text } = this.state;
     const kaimoLarge = kaimoLargeNumber('777', '666');
     return <div className="search-text">
+      <img src={ girl } />
       { kaimo }
       凯小默的博客666
       { Text ? <Text /> : null }
