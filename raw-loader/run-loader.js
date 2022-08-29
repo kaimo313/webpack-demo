@@ -6,7 +6,12 @@ runLoaders(
     {
         resource: "./src/kaimo.txt",
         loaders: [
-            path.resolve(__dirname, "./src/raw-loader.js")
+            {
+                loader: path.resolve(__dirname, "./src/raw-loader.js"),
+                options: {
+                    name: "kaimo313"
+                }
+            }
         ],
         context: {
             minimize: true
