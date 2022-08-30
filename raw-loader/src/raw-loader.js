@@ -1,7 +1,6 @@
 const loaderUtils = require("loader-utils");
 const fs = require('fs');
 const path = require('path');
-const { callbackify } = require("util");
 
 module.exports = function(source) {
 	const { name } = loaderUtils.getOptions(this);
